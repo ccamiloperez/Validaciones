@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Validacion por control</title>
+    </h:head>
+    <h:body>
+            <h:form>
+            <table style="margin: 5%; " cellspacing="3" cellpadding="3" border="1">
+            <tr>
+                <td><h:outputText value="Validador Campo Vacio:"/></td>
+                <td><h:inputText  id="txtVacio"  value="#{validar.vacio}" /></td>
+                <td><h:message for="txtVacio" style="color: red;"/></td>
+            </tr>
+            <tr>
+                <td><h:outputText value="Validador Tamaño:"/></td>
+                <td><h:inputText  id="txtTamano"  value="#{validar.tamano}" /></td>
+                <td><h:message for="txtTamano" style="color: red;"/></td>
+            </tr>
+            <tr>
+                <td><h:outputText value="Validador Correo:"/></td>
+                <td><h:inputText  id="txtCorreo"  value="#{validar.correo}" /></td>
+                  <td>  <h:message for="txtCorreo" style="color: red;"/></td>
+            </tr>  
+            <tr>
+                <td><h:outputText value="Validador Numerico"/></td>
+                <td><h:inputText  id="txtNumerico"  value="#{validar.numerico}" /></td>
+                  <td>   <h:message for="txtNumerico" style="color: red;"/></td>
+            </tr>   
+            <tr>
+                <td><h:outputText value="Validador Fecha"/></td>
+                <td><h:inputText  id="txtFecha"  value="#{validar.fecha}"/></td>
+                  <td>  <h:message for="txtFecha" style="color: red;"/></td>
+            </tr> 
+            <tr>
+                <td><h:outputText value="Validador Moneda"/></td>
+                <td><h:inputText  id="txtMoneda"  value="#{validar.moneda}"/></td>  
+                <td><h:message for="txtMoneda" style="color: red;"/></td>
+            </tr> 
+            <tr>
+                <td></td>
+                <td><h:commandButton value="Validar" action="correcto" style="width: 100%;"></h:commandButton></td>
+                <td></td>
+            </tr>
+            </table>
+       
+        </h:form>
+    </h:body>
+</html>
+

@@ -56,56 +56,92 @@ public class Validar {
      * Guarda el sueldo de una persona y valida que sea numeros de 1 a 9 digitos
      * con el simbolo $
      */
-    @Pattern(regexp = "[$]?[-+]?\\d{3,9}(\\.\\d{1,2})?", message = "Formato moneda no valido")
+    @Pattern(regexp = "\\$\\d+(?:\\.\\d+)?", message = "Formato de moneda no válido, debe ser usar el signo $")
     private String moneda;
-
+    
     public Validar() {
     }
-    
+    /**
+     * Obtiene el campo donde se valida que no sea vacio
+     * @return 
+     */
     public int getVacio() {
         return vacio;
     }
-
+    /**
+     * Método que le da valor al campo donde se valida  que no sea vacio
+     * @param vacio 
+     */
     public void setVacio(int vacio) {
         this.vacio = vacio;
     }
-
+    /**
+     * Obtiene el telefono con un determinado tamaño
+     * @return 
+     */
     public String getTamano() {
         return tamano;
     }
-
+    /**
+     * Método que le da valor al telefono segun su cantidad de cifras
+     * @param tamano 
+     */
     public void setTamano(String tamano) {
         this.tamano = tamano;
     }
-
+    /**
+     * Método que obtiene el correo
+     * @return 
+     */
     public String getCorreo() {
         return correo;
     }
-
+    /**
+     * Método que le da valor al correo
+     * @param correo 
+     */
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-
+    /**
+     * Método que obtiene la edad siendo de tipo numérico
+     * @return 
+     */
     public int getNumerico() {
         return numerico;
     }
-
+    /**
+     * Método que le da valor a la edad
+     * @param numerico 
+     */
     public void setNumerico(int numerico) {
         this.numerico = numerico;
     }
-
+    /**
+     * Método que obtiene la fecha
+     * @return 
+     */
     public String getFecha() {
         return fecha;
     }
-
+    /**
+     * Método que le da valor a la fecha
+     * @param fecha 
+     */
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
-
+    /**
+     * Método que obtiene el salario
+     * @return 
+     */
     public String getMoneda() {
         return moneda;
     }
-
+    /**
+     * Método que le da valor al salario
+     * @param moneda 
+     */
     public void setMoneda(String moneda) {
         this.moneda = moneda;
     }
